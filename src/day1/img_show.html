@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../../vendor/vue.min.js"></script>
+</head>
+<body>
+  <div id="app" style="margin-left: 100px; margin-top: 100px; border: 1px solid rebeccapurple;">
+    <input type="button" value="←" @click="to_left" v-show="idx > 0">
+    <img :src="img_lst[idx]" height="250" width="250">
+    <input type="button" value="→" @click="to_right" v-show="idx < img_lst.length-1">
+    <p style="font-size: 60px">{{ idx }}</p>
+  </div>
+
+  <script src="img_show.js"></script>
+</body>
+</html>

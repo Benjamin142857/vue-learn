@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>notebook</title>
+
+  <link rel="stylesheet" href="../../vendor/css/bootstrap.min.css">
+  <script src="../../vendor/vue.min.js"></script>
+  <style>
+    #notebook a:hover {
+      cursor: auto;
+    }
+    #notebook a span:hover {
+      cursor: pointer;
+    }
+    #notebook a:hover a>span{
+      display: initial;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="jumbotron" style="background: none">
+      <div class="container">
+        <h1 class="display-4">Benjamin 记事本</h1>
+        <p class="lead">Benjamin 记事本，一款高端大气上档次的记事本，您可以在这里记录一些事情备忘，</p>
+      </div>
+    </div>
+
+
+
+    <div class="row" style="margin-top: 100px">
+      <div id="notebook" class="col-8 offset-2">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="记录一些事" aria-label="Recipient's username" aria-describedby="button-addon2" v-model="input_str" @keyup.enter="add_note">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="add_note">note</button>
+          </div>
+        </div>
+
+        <ul class="list-group" style="margin-top: 30px">
+          <a href="#" class="list-group-item list-group-item-action" v-for="(note, idx) in note_lst">{{ note.date }}  -  {{ note.content }}<span style="display: none;position: absolute;right: 30px;font-size: 18px" @click="del_note(idx)">×</span></a>
+          <li class="list-group-item" style="max-height: 35px;padding: 0;color: darkgrey">
+            <span style="margin: 0 10px;font-size: 18px;">{{ this.note_lst.length }} items</span>
+            <span style="position: absolute;right: 0;margin: 0 10px;font-size: 18px;cursor: pointer" @click="clear_note">clear</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="notebook.js"></script>
+</body>
+</html>

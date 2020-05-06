@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <link rel="stylesheet" href="../../vendor/css/bootstrap.min.css">
+  <script src="../../vendor/vue.min.js"></script>
+</head>
+<body>
+  <div id="main">
+    <div class="container" style="margin-top: 100px">
+      <div class="row">
+        <div class="list-group col-6 offset-3">
+          <big_title></big_title>
+          <food_item v-for="item in food_lst" :food_obj="item" :change_food="change_food"></food_item>
+
+          <h3 style="margin-top: 30px">今天的你选择了： {{ selected_food }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="test.js"></script>
+</body>
+</html>

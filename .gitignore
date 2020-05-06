@@ -1,2 +1,3 @@
 .idea/
-__p
+__pycache__/
+node-learn/

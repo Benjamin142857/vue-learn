@@ -1,0 +1,24 @@
+{
+  "name": "vue-learn",
+  "version": "1.0.0",
+  "description": "benjamin vue learning",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "mime": "^2.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benjamin142857/vue-learn.git"
+  },
+  "author": "Benjamin142857",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benjamin142857/vue-learn/issues"
+  },
+  "homepage": "https://github.com/Benjamin142857/vue-learn#readme"
+}

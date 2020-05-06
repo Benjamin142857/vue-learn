@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Test</title>
+
+  <script src="../../vendor/vue.min.js"></script>
+  <style>
+    #screen th {
+      min-width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div style="margin: 100px; border: 3px solid palevioletred">
+    <div id="screen" style="margin: 50px; border: 2px solid paleturquoise">
+      <table border="1" style="font-size: 24px; margin: 16px">
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Weight</th>
+          <th>Price</th>
+          <th>option</th>
+        </tr>
+        <tr v-for="(obj, idx) in meal_lst">
+          <td>{{ idx+1 }}</td>
+          <td>{{ obj.name }}</td>
+          <td>{{ obj.weight }}g</td>
+          <td>${{ obj.price }}</td>
+          <td><a href="#" @click="del_meal(idx)">删除</a></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="panel" style="margin: 50px; border: 2px solid peru">
+      <div style="font-size: 24px; margin: 16px">
+        <span>原料名： </span><input type="text" style="font-size: 24px" v-model="new_meal_name">
+      </div>
+      <div style="font-size: 24px; margin: 16px">
+        <span>重量： </span><input type="text" style="font-size: 24px" v-model="new_meal_weight">
+      </div>
+      <div style="font-size: 24px; margin: 16px">
+        <span>价格： </span><input type="text" style="font-size: 24px" v-model="new_meal_price">
+      </div>
+
+      <input type="button" value="添加" @click="add_meal">
+      <input type="button" value="清空" @click="clear_meal">
+    </div>
+  </div>
+
+
+
+
+  <script src="for_test.js"></script>
+</body>
+</html>

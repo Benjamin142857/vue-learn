@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <script src="../../vendor/vue.min.js"></script>
+</head>
+<body>
+
+  <div id="demo">
+    <button-counter :btn-title="msg" v-if="btn_show"></button-counter>
+<!--    <button-counter title="2"></button-counter>-->
+<!--    <button-counter title="3"></button-counter>-->
+    <h1>{{ msg }}</h1>
+    <button @click="btn_change">666</button>
+    <my-box></my-box>
+  </div>
+
+  <script src="test.js"></script>
+</body>
+</html>

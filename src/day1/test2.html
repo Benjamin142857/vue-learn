@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../../vendor/vue.min.js"></script>
+  <style>
+    .c1 {
+      color: aqua;
+
+    }
+    .c2 {
+      font-size: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <input type="button" value="-" @click="sub">
+    <span v-bind:style="'font-size: ' + (num*10) + 'px'">{{ num }}</span>
+    <input type="button" value="+" @click="add">
+    <img src="../../assert/a.png" alt="" v-show="num>5">
+    <input type="button"value="change_show" @click="change_show">
+
+    <p :class="{c1:c1, c2:c2}">Benjamin</p>
+    <input type="text" :value="c1?'has_c1':'not_c1'">
+<!--    <input type="button" value="c1" @click="switch_c1">-->
+    <input type="button" value="c1" @mouseenter="switch_c1" @mouseleave="switch_c1">
+    <input type="button" value="c2" @click="switch_c2">
+  </div>
+
+  <script src="test.js"></script>
+</body>
+</html>
